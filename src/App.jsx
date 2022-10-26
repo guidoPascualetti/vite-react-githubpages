@@ -1,7 +1,13 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Menu from "./components/shared/Menu";
 function App() {
   return (
     <>
-      <h1> Hola Home</h1>
+      <Menu />
+      <Routes>
+        <Route path="/vite-react-githubpages" element={<Home />} />
+      </Routes>
     </>
   );
 }

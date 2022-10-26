@@ -1,0 +1,16 @@
+// Import the functions & variables
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+$custom-theme-colors: (
+	'violeta': #3B398C,
+	'lila': #8C87BB,
+	'gris-oscuro': #2B2523,
+    'gris-intermedio' : #85827F,
+	'gris-claro': #DEDEDB,
+    'gris-clarito-fondo': #F1F1F1
+
+
+
+);
+$theme-colors: map-merge($custom_theme-colors, $theme-colors);
