@@ -7,14 +7,10 @@ function menu() {
   const DEVICE_EXPAND = "xl";
   return (
     <>
-      <Navbar bg="white" expand={DEVICE_EXPAND} className="mb-3">
-        <Container fluid>
-          <Nav.Link className="">
-            {/* <i className="bi bi-search"></i> */}
-          </Nav.Link>
-          <Navbar.Brand href="#">
-            {" "}
-            <img className="" style={{ width: "50%" }} src={logo} />
+      <Navbar bg="white" expand={DEVICE_EXPAND} className="">
+        <Container>
+          <Navbar.Brand href="#" className="">
+            <img className="" style={{ width: "200px" }} src={logo} />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls={`offcanvasNavbar-expand-${DEVICE_EXPAND}`}
