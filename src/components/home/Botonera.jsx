@@ -14,23 +14,37 @@ export default function Botonera() {
   ];
 
   return (
-    <Container fluid>
-      <Row className="bg-gris-intermedio">
-        <Col xs={12}>
-          <h1 className="psico-destacado text-white">ACCESOS RÁPIDOS</h1>
-        </Col>
-        {BOTONES.map((item) => (
-          <Col key={item.title} md={{ span: 10, offset: 1 }} className="pb-2">
-            <Button
-              variant="gris-oscuro"
-              className="rounded-0 pt-3 pb-3"
-              style={{ width: "100%" }}
-            >
-              {item.title}
-            </Button>
+    <Container fluid className="bg-gris-intermedio">
+      <Container>
+        <Row className="">
+          <Col xs={12} lg={2}>
+            <h1 className="text-white pt-4">
+              <span className="psico-destacado">ACCESOS</span>{" "}
+              <span className="">RÁPIDOS</span>
+            </h1>
           </Col>
-        ))}
-      </Row>
+          <Col xs={12} lg={10} className="pb-2  pt-4">
+            <Row>
+              {BOTONES.map((item) => (
+                <Col
+                  xs={{ span: 12, offset: 0 }}
+                  lg={{ span: 4, offset: 0 }}
+                  key={item.title}
+                  className="mb-2"
+                >
+                  <Button
+                    variant="gris-oscuro"
+                    className="rounded-0 pb-2"
+                    style={{ width: "100%" }}
+                  >
+                    <span className="psico-p-destacado">{item.title}</span>
+                  </Button>
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 }
