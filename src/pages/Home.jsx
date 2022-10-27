@@ -13,6 +13,7 @@ export default function Home() {
       <Cards />
       <br />
       <Botonera />
+      <br />
     </>
   );
 }
