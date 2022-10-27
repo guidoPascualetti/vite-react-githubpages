@@ -1,6 +1,8 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import logo from "../../assets/logos/logo-blanco.png";
+
 export default function Footer() {
   const links = {
     Estudiantes: [
@@ -25,11 +27,12 @@ export default function Footer() {
         <Container>
           <Row>
             <Col xs={12} lg={3} className="pt-3">
-              Facultad de psico
+              <img className="" style={{ width: "200px" }} src={logo} />
               <p className="footer-p pt-3">
-                Calle 51 entre 123 y 124, Ensenada (CP1925), Provincia de Buenos
-                Aires, Argentina. <b>Teléfonos:</b> +54 (0221) 482 4415 - 482
-                5931 -  482 8457 - 483 3933 - 483-4871
+                Calle 51 entre 123 y 124, Ensenada (CP1925), <br />
+                Provincia de Buenos Aires, Argentina. <br />
+                <b>Teléfonos:</b> +54 (0221) 482 4415 - 482 5931 -<br /> 482
+                8457 - 483 3933 - 483-4871
               </p>
             </Col>
             {Object.keys(links).map((k) => (
