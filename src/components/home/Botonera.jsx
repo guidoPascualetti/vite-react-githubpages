@@ -14,7 +14,7 @@ export default function Botonera() {
   ];
 
   return (
-    <Container fluid className="bg-gris-intermedio">
+    <Container fluid className="botonera">
       <Container>
         <Row className="">
           <Col xs={12} lg={2}>
