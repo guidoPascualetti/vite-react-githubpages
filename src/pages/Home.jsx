@@ -9,6 +9,7 @@ export default function Home() {
         titulo="Información sobre preinscripciones para las carreras de grado"
         id="2"
       />
+
       <Cards />
       <br />
       <Botonera />

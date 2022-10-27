@@ -7,7 +7,7 @@ function menu() {
   const DEVICE_EXPAND = "xl";
   return (
     <>
-      <Navbar fixed="top" bg="white" expand={DEVICE_EXPAND} className="mb-3">
+      <Navbar bg="white" expand={DEVICE_EXPAND} className="mb-3">
         <Container fluid>
           <Nav.Link className="">
             {/* <i className="bi bi-search"></i> */}

@@ -3,11 +3,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import TextoConEncuadre from "../UI/TextoConEncuadre";
 
-export default function CardHeader({ tax, titulo, id }) {
+export default function CardHeader({ tax, titulo, id, image = false }) {
   return (
-    <Container fluid className="bg-lila">
+    <Container fluid className=" header ">
       <Container>
-        <Row className="bg-lila" style={{ height: "351px" }}>
+        <Row className="" style={{ height: "351px" }}>
           <Col
             xs={12}
             lg={6}
@@ -18,8 +18,11 @@ mb-5 mb-lg-0"
             <TextoConEncuadre tax={tax} color="white" className="" />
             <h1 className="psico-destacado text-white">{titulo}</h1>
           </Col>
-          {}
-          <Col lg={6} className="bg-primary d-none d-lg-block"></Col>
+          {image ? (
+            <Col lg={6} className="bg-primary d-none d-lg-block"></Col>
+          ) : (
+            ""
+          )}
         </Row>
       </Container>
     </Container>
