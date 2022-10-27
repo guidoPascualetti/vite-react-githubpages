@@ -1,11 +1,8 @@
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-
+import logo from "../../assets/logos/logo.svg";
 function menu() {
   const DEVICE_EXPAND = "xl";
   return (
@@ -13,11 +10,11 @@ function menu() {
       <Navbar fixed="top" bg="white" expand={DEVICE_EXPAND} className="mb-3">
         <Container fluid>
           <Nav.Link className="">
-            <i className="bi bi-search"></i>
+            {/* <i className="bi bi-search"></i> */}
           </Nav.Link>
           <Navbar.Brand href="#">
             {" "}
-            {/* <img className="img-fluid" src={route} /> */}
+            <img className="" style={{ width: "50%" }} src={logo} />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls={`offcanvasNavbar-expand-${DEVICE_EXPAND}`}
