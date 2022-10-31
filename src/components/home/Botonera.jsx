@@ -17,12 +17,16 @@ export default function Botonera() {
   return (
     <Container fluid className="botonera">
       <Container className>
-        <Row className=" pb-2 pt-2">
+        <Row className=" pb-5 pt-5">
           <Col xs={12} lg={3}>
-            <h1 className="text-white d-flex align-items-center">
+            <p className="text-white d-flex align-items-center  border-bottom border-lila border-4">
               <span className="psico-destacado">ACCESOS</span>{" "}
               <span className="">RÁPIDOS</span>
-            </h1>
+            </p>
+            {/* <div
+              style={{ width: "40px", height: "5px" }}
+              className="bg-lila"
+            ></div> */}
           </Col>
 
           {BOTONES.map((item) => (

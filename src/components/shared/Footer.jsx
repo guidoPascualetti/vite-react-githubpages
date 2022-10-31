@@ -26,15 +26,6 @@ export default function Footer() {
       <Container fluid className="bg-gris-oscuro text-white">
         <Container>
           <Row>
-            <Col xs={12} lg={3} className="pt-3">
-              <img className="" style={{ width: "200px" }} src={logo} />
-              <p className="footer-p pt-3">
-                Calle 51 entre 123 y 124, Ensenada (CP1925), <br />
-                Provincia de Buenos Aires, Argentina. <br />
-                <b>Teléfonos:</b> +54 (0221) 482 4415 - 482 5931 -<br /> 482
-                8457 - 483 3933 - 483-4871
-              </p>
-            </Col>
             {Object.keys(links).map((k) => (
               <Col xs={12} lg={3} key={k} className="pt-3">
                 <h5 className="pb-3">{k}</h5>
@@ -43,6 +34,15 @@ export default function Footer() {
                 ))}
               </Col>
             ))}
+            <Col xs={12} lg={3} className="pt-3 order-lg-first">
+              <img className="" style={{ width: "200px" }} src={logo} />
+              <p className="footer-p pt-3">
+                Calle 51 entre 123 y 124, Ensenada (CP1925), <br />
+                Provincia de Buenos Aires, Argentina. <br />
+                <b>Teléfonos:</b> +54 (0221) 482 4415 - 482 5931 -<br /> 482
+                8457 - 483 3933 - 483-4871
+              </p>
+            </Col>
           </Row>
         </Container>
       </Container>

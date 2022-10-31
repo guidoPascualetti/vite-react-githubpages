@@ -5,7 +5,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import logo from "../../assets/logos/logo.svg";
 
-import "./Menu.css";
 function menu() {
   const DEVICE_EXPAND = "xl";
   const [isSearchOpen, setIsSearchOpen] = useState(true);
@@ -56,7 +55,7 @@ function menu() {
                 <Nav.Link>GESTIÓN</Nav.Link>
                 <Nav.Link>
                   <i
-                    class="bi bi-search"
+                    className="bi bi-search"
                     variant="primary"
                     onClick={handleShow}
                   ></i>
