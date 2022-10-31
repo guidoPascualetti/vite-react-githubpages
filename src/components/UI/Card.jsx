@@ -18,11 +18,11 @@ export default function Card({
           <Col xs={12}>
             <TextoConEncuadre tax={area} />
           </Col>
-          <Col xs={12} className="pt-2">
+          {/* <Col xs={12} className="pt-2">
             <span className="">{fecha}</span>
-          </Col>
+          </Col> */}
           <Col xs={12}>
-            <h1 className="text-gris-oscuro psico-h1">
+            <h1 className="text-gris-oscuro psico-h1 pt-2">
               {titulo}
               <div
                 className="bg-gris-oscuro d-none d-md-block mt-2"

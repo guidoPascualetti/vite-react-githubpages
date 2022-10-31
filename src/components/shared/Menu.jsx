@@ -1,10 +1,18 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import logo from "../../assets/logos/logo.svg";
+
+import "./Menu.css";
 function menu() {
   const DEVICE_EXPAND = "xl";
+  const [isSearchOpen, setIsSearchOpen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Navbar bg="white" expand={DEVICE_EXPAND} className="">
@@ -12,9 +20,19 @@ function menu() {
           <Navbar.Brand href="#" className="">
             <img className="" style={{ width: "200px" }} src={logo} />
           </Navbar.Brand>
-          <Navbar.Toggle
-            aria-controls={`offcanvasNavbar-expand-${DEVICE_EXPAND}`}
-          />
+
+          <div className="d-flex  justify-content-between">
+            <i
+              className="bi bi-search d-xl-none pe-4"
+              style={{ fontSize: "30px" }}
+              variant="primary"
+              onClick={handleShow}
+            ></i>
+            <Navbar.Toggle
+              aria-controls={`offcanvasNavbar-expand-${DEVICE_EXPAND}`}
+            />
+          </div>
+
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${DEVICE_EXPAND}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${DEVICE_EXPAND}`}
@@ -36,20 +54,29 @@ function menu() {
                 <Nav.Link>SALUD MENTAL Y DDHH</Nav.Link>
                 <Nav.Link>COMUNICACIÓN Y VINCULACIÓN</Nav.Link>
                 <Nav.Link>GESTIÓN</Nav.Link>
+                <Nav.Link>
+                  <i
+                    class="bi bi-search"
+                    variant="primary"
+                    onClick={handleShow}
+                  ></i>
+                </Nav.Link>
               </Nav>
-              {/* <Form className="d-flex">
-                <Form.Control
-                  type="search"
-                  placeholder="Search"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-              </Form> */}
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
+
+      <Offcanvas show={show} onHide={handleClose} className="bg-lila">
+        <Offcanvas.Header closeButton>
+          {/* <Offcanvas.Title>Facultad de Psicología</Offcanvas.Title> */}
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <div className="d-flex justify-content-center">
+            <h1 className="">Buscar</h1>
+          </div>
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 }
