@@ -19,7 +19,7 @@ export default function Acordion({ header, children }) {
               <h5 className="psico-h1  m-0">{header}</h5>
             </div>
 
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center psico-h1">
               {toggleIsOpen ? <i> - </i> : <i> + </i>}
             </div>
           </Col>
