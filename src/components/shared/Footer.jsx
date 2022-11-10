@@ -35,7 +35,7 @@ export default function Footer() {
               </Col>
             ))} */}
             {Object.keys(links).map((k) => (
-              <Acordion key={k} header={k}>
+              <Acordion key={k} title={k}>
                 {links[k].map((link) => (
                   <p key={link.label}>{link.label}</p>
                 ))}
@@ -51,6 +51,10 @@ export default function Footer() {
                 8457 - 483 3933 - 483-4871
               </p>
             </Col>
+          </Row>
+          <Row>
+         {/* fkdlsñfkldsk */}
+          
           </Row>
         </Container>
       </Container>

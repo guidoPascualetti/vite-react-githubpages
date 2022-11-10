@@ -4,6 +4,22 @@ $w-bold: 700;
 $w-extra-bold: 800;
 $w-black: 900;
 
+.secretarias {
+	font-size: 34px;
+	font-weight: $w-extra-bold;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: left;
+
+}
+.secretarias-fino {
+	font-size: 34px;
+	font-weight: $w-regular;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: left;
+
+}
 .psico-destacado {
 
 	font-size: 24px;
@@ -36,8 +52,15 @@ $w-black: 900;
 .psico-p-destacado {
 	font-size: 16px;
 	font-weight: $w-regular;
+	line-height: 22px;
 
 }
+.psico-p-menu {
+	font-size: 14px;
+	font-weight: $w-regular;
+
+}
+
 
 
 .footer-p {
