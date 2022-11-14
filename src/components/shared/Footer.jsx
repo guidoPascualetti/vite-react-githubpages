@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import logo from "../../assets/logos/logo-blanco.png";
-import Acordion from "../UI/Acordion";
+import AcordionContainer from "../UI/Acordion";
 export default function Footer() {
   const links = {
     Estudiantes: [
@@ -34,13 +34,15 @@ export default function Footer() {
                 ))}
               </Col>
             ))} */}
-            {Object.keys(links).map((k) => (
-              <Acordion key={k} title={k}>
-                {links[k].map((link) => (
-                  <p key={link.label}>{link.label}</p>
-                ))}
-              </Acordion>
-            ))}
+            <AcordionContainer>
+              {Object.keys(links).map((k) => (
+                <AcordionContainer.Acordion key={k} title={k}>
+                  {links[k].map((link) => (
+                    <p key={link.label}>{link.label}</p>
+                  ))}
+                </AcordionContainer.Acordion>
+              ))}
+            </AcordionContainer>
 
             <Col xs={12} lg={3} className="pt-3 order-lg-first">
               <img className="" style={{ width: "200px" }} src={logo} />

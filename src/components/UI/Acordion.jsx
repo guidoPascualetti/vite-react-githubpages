@@ -3,20 +3,32 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
 import "./Acordion.scss";
-export default function Acordion({ title, children }) {
-  const [toggleIsOpen, setToggleIsOpen] = useState(false);
+function Acordion({ title, children }) {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <>
-    <div className="accordion-item">
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <div>{title}</div>
-        <div>{isActive ? '-' : '+'}</div>
+      <div className="acordion">
+        <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+          <div>{title}</div>
+          <div>{isActive ? "-" : "+"}</div>
+        </div>
+        <div
+          className={`${
+            isActive ? "acordion-container" : "acordion-container-a"
+          }`}
+        >
+          {children}
+        </div>
       </div>
-      {isActive && <div className="accordion-content">{children}</div>}
-    </div>
     </>
-   
   );
 }
+
+export function AcordionContainer({ children }) {
+  return <>{children}</>;
+}
+
+AcordionContainer.Acordion = Acordion;
+
+export default AcordionContainer;
