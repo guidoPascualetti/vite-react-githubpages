@@ -1,8 +1,8 @@
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// import logo from "../../assets/logos/logo-blanco.png";
-// import Acordion from "../UI/Acordion";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import logo from "../../assets/logos/logo-blanco.png";
+import Acordion from "../UI/Acordion";
 export default function Footer() {
   const links = {
     Estudiantes: [

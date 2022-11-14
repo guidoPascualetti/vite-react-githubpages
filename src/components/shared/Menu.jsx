@@ -15,7 +15,7 @@ function menu() {
   return (
     <>
       <Navbar bg="white" expand={DEVICE_EXPAND} className="">
-        <Container>
+        <Container fluid>
           <Navbar.Brand href="#" className="">
             <img className="" style={{ width: "200px" }} src={logo} />
           </Navbar.Brand>
@@ -45,7 +45,7 @@ function menu() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav className="justify-content-end flex-grow-1 psico-p-menu">
                 <Nav.Link>INSTITUCIONAL</Nav.Link>
                 <Nav.Link>ACADÉMICA</Nav.Link>
                 <Nav.Link>INVESTIGACIÓN</Nav.Link>
