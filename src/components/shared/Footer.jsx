@@ -52,10 +52,7 @@ export default function Footer() {
               </p>
             </Col>
           </Row>
-          <Row>
-         {/* fkdlsñfkldsk */}
-          
-          </Row>
+          <Row></Row>
         </Container>
       </Container>
     </>
