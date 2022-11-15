@@ -5,6 +5,7 @@ import Title from "../components/UI/Title";
 import SubTitle from "../components/UI/SubTitle";
 import AutoridadCargo from "../components/UI/AutoridadCargo";
 import ContactoCard from "../components/UI/ContactoCard";
+import Cards from "../components/group/Cards";
 
 import Boton from "../components/UI/Boton";
 
@@ -134,6 +135,9 @@ export default function Posgrado() {
           </h3>
           </Title>
         </Col>
+        </Row>
+        <Row>
+        <Cards />
         </Row>
       </Container>   
        </>
