@@ -1,9 +1,13 @@
+import { useState } from "react";
+import Acordeon from "../functional/Acordeon";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import logo from "../../assets/logos/logo-blanco.png";
-import AcordionContainer from "../UI/Acordion";
+import AcordeonButton from "../UI/footer/AcordeonButton";
 export default function Footer() {
+  const [acordeonActive, setAcordeonActive] = useState("");
   const links = {
     Estudiantes: [
       { label: "Calendario Acádemico" },
@@ -21,28 +25,54 @@ export default function Footer() {
     ],
     Nodocentes: [{ label: "ATULP" }],
   };
+  const handlerClickAcorden = (k) => {
+    if (k == acordeonActive) {
+      setAcordeonActive("");
+    } else {
+      setAcordeonActive(k);
+    }
+  };
   return (
     <>
       <Container fluid className="bg-gris-oscuro text-white pt-5 pb-5">
         <Container>
           <Row>
-            {/* {Object.keys(links).map((k) => (
-              <Col xs={12} lg={3} key={k} className="pt-3">
+            {Object.keys(links).map((k) => (
+              <Col
+                lg={3}
+                key={k}
+                className="pt-3 d-none d-lg-block"
+                style={{ lineHeight: "15px" }}
+              >
                 <h5 className="pb-3">{k}</h5>
                 {links[k].map((link) => (
                   <p key={link.label}>{link.label}</p>
                 ))}
               </Col>
-            ))} */}
-            <AcordionContainer>
-              {Object.keys(links).map((k) => (
-                <AcordionContainer.Acordion key={k} title={k}>
-                  {links[k].map((link) => (
-                    <p key={link.label}>{link.label}</p>
-                  ))}
-                </AcordionContainer.Acordion>
-              ))}
-            </AcordionContainer>
+            ))}
+
+            {Object.keys(links).map((k) => (
+              <Col xs={12} className="d-lg-none">
+                {" "}
+                <Acordeon
+                  key={k}
+                  isActive={acordeonActive === k}
+                  clickHandler={() => handlerClickAcorden(k)}
+                >
+                  <Acordeon.Button>
+                    <AcordeonButton
+                      title={k}
+                      isActive={acordeonActive === k}
+                    ></AcordeonButton>
+                  </Acordeon.Button>
+                  <Acordeon.Content styled="pt-3 ps-4">
+                    {links[k].map((link) => (
+                      <p key={link.label}>{link.label}</p>
+                    ))}
+                  </Acordeon.Content>
+                </Acordeon>
+              </Col>
+            ))}
 
             <Col xs={12} lg={3} className="pt-3 order-lg-first">
               <img className="" style={{ width: "200px" }} src={logo} />
