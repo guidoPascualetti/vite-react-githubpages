@@ -1,13 +1,19 @@
-Navbar
+ ## Tareas
+
+**Navbar**
     Poner redes
     Sacar Lupa en tel
-Home
-    Ver que la Foto de la destacada se vea bien
+**Home**
+1. Ver que la Foto de la destacada se vea bien
     
-Footer
-    Cambiar los acordeones por texto en Desktop
+**Footer**
+1. Cambiar los acordeones por texto en Desktop :white_check_mark:
 
-POSGRADO
-    REVISAR EN LA TOTALIDAD
-    HACER ACODION
-    HACER DESKTOP
+**POSGRADO**
+1. REVISAR EN LA TOTALIDAD
+2. HACER ACODION
+3. HACER DESKTOP
+
+
+**Globals**
+1. Linkear posgrado
