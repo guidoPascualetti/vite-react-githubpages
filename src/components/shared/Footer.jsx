@@ -1,10 +1,11 @@
 import { useState } from "react";
-import Acordeon from "../functional/Acordeon";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import logo from "../../assets/logos/logo-blanco.png";
+
+import Acordeon from "../functional/Acordeon";
 import AcordeonButton from "../UI/footer/AcordeonButton";
 export default function Footer() {
   const [acordeonActive, setAcordeonActive] = useState("");

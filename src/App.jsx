@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Menu from "./components/shared/Menu";
 import Footer from "./components/shared/Footer";
-import Posgrado from "./pages/Posgrado"
+import Posgrado from "./pages/Posgrado";
+// import Menu from "./components/functional/Navbar";
 function App() {
   return (
     <>
