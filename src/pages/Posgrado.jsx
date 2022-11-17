@@ -1,37 +1,85 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Cards from "../components/group/Cards";
+import Boton from "../components/UI/Boton";
+import HeaderSecretaria from "../components/secretarias/HeaderSecretaria";
+import AutoridadesContactoSecretaria from "../components/secretarias/AutoridadesContactoSecretaria";
+import data from "../api/posgrado";
+import Title from "../components/secretarias/UI/Title";
+import Acordeon from "../components/functional/Acordeon";
+import { useState } from "react";
 export default function Posgrado() {
+  const [acordeonActive, setAcordeonActive] = useState("");
+  const handlerClickAcorden = (k) => {
+    if (k == acordeonActive) {
+      setAcordeonActive("");
+    } else {
+      setAcordeonActive(k);
+    }
+  };
+
   return (
     // <PagesLayout nombre="Posgrado" descripcion=" desc de la sec" imagen="" />
-    <> 
+    <>
       <Container>
-       <Row>
-        <Col xs={12} style={{height:"400px"}} 
-          className="bg-lila"
-        >
+        <HeaderSecretaria
+          firstT={data.tituloFino}
+          secondT={data.titleAncho}
+        ></HeaderSecretaria>
 
-         
-        </Col>
-        <Col xs={12} >
-           <div className="pt-4">
-           <h1 className="text-lila secretarias-fino">SECRETARÍA DE <br /><span className="secretarias">POSGRADO</span></h1>
-           </div>
+        <AutoridadesContactoSecretaria
+          autoridades={data.autoridades}
+          email={data.email}
+          direccion={data.direccion}
+          lugar={data.lugar}
+          horario={data.horario}
+        ></AutoridadesContactoSecretaria>
+
+        <Row className="mt-3">
+          {data.acordeon.map((item, index) => (
+            <Col className="mt-2" xs={12} md={6} lg={3} key={index}>
+              <Acordeon
+                isActive={acordeonActive === item.id}
+                clickHandler={() => handlerClickAcorden(item.id)}
+              >
+                <Acordeon.Button>
+                  <Boton bg={item.bg} isActive={acordeonActive === item.id}>
+                    <p
+                      className={`psico-destacado-fino text-${item.color} p-0 m-0`}
+                    >
+                      {item.title} <br></br>
+                      <span className={`psico-destacado text${item.color}`}>
+                        {item.titleBold}
+                      </span>
+                    </p>
+                  </Boton>
+                </Acordeon.Button>
+                <Acordeon.Content>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Fugiat eos sapiente eius quo id accusantium non fugit unde
+                  atque accusamus excepturi quod ad, eaque quos molestiae est,
+                  labore impedit voluptatem.
+                </Acordeon.Content>
+              </Acordeon>
+            </Col>
+          ))}
+        </Row>
+
+        <Row>
+          <Col xs={12} className="pt-4 ">
+            <Title>
+              <h3 className="text-gris-intermedio psico-destacado-fino">
+                NOTICIAS &nbsp;
+                <span className="psico-destacado">POSGRADO</span>
+              </h3>
+            </Title>
           </Col>
-        <Col xs={12} >
-        <div className="p-4">
-        <p className="psico-p-destacado">
-          La Secretaría de Posgrado es el área que tiene a su cargo la gestión de las carreras de grados académicos de postgrado y de las actividades formativas de actualización, profundización y perfeccionamiento que ofrece la Facultad.
-        
-            
-          </p>
-          <p className="psico-p-destacado">
-          Las propuestas que se imparten en la actualidad son las carreras de Doctorado en Psicología, la Especialización en Clínica Psicoanalítica con Adultos y la Especialización en Evaluación y Diagnóstico Psicológico. A esto se suman los programas de actualización profesional y los cursos y seminarios no conducentes a título.
-          </p>
-        </div>
-        </Col>
-        </Row>   
-      </Container>   
-       </>
+        </Row>
+        <Row>
+          <Cards />
+        </Row>
+      </Container>
+    </>
   );
 }

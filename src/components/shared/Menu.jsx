@@ -1,81 +1,47 @@
-import { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Offcanvas from "react-bootstrap/Offcanvas";
+// import { useState } from "react";
+// import Container from "react-bootstrap/Container";
+// import Nav from "react-bootstrap/Nav";
+// import Navbar from "react-bootstrap/Navbar";
+// import Offcanvas from "react-bootstrap/Offcanvas";
 import logo from "../../assets/logos/logo.svg";
+// import { Link } from "react-router-dom";
+import Navbar from "../functional/Navbar";
+const links = [
+  { name: "INSTITUCIONAL" },
+  { name: "ACADÉMICA" },
+  { name: "INVESTIGACIÓN" },
+  { name: "POSGRADO" },
+  { name: "SALUD MENTAL Y DDHH" },
+  { name: "COMUNICACIÓN Y VINCULACIÓN" },
+  { name: "GESTIÓN" },
+];
 
 function menu() {
-  const DEVICE_EXPAND = "xl";
-  const [isSearchOpen, setIsSearchOpen] = useState(true);
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
     <>
-      <Navbar bg="white" expand={DEVICE_EXPAND} className="">
-        <Container fluid>
-          <Navbar.Brand href="#" className="">
-            <img className="" style={{ width: "200px" }} src={logo} />
+      <Navbar>
+        <Navbar.Desktop>
+          <Navbar.Brand>
+            <div className="">
+              <img style={{ width: "100%" }} src={logo} />
+            </div>
           </Navbar.Brand>
-
-          <div className="d-flex  justify-content-between">
-            <i
-              className="bi bi-search d-xl-none pe-4"
-              style={{ fontSize: "30px" }}
-              variant="primary"
-              onClick={handleShow}
-            ></i>
-            <Navbar.Toggle
-              aria-controls={`offcanvasNavbar-expand-${DEVICE_EXPAND}`}
-            />
-          </div>
-
-          <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-${DEVICE_EXPAND}`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-${DEVICE_EXPAND}`}
-            placement="end"
-          >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title
-                id={`offcanvasNavbarLabel-expand-${DEVICE_EXPAND}`}
-              >
-                Offcanvas
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 psico-p-menu">
-                <Nav.Link>INSTITUCIONAL</Nav.Link>
-                <Nav.Link>ACADÉMICA</Nav.Link>
-                <Nav.Link>INVESTIGACIÓN</Nav.Link>
-                <Nav.Link>POSGRADO</Nav.Link>
-                <Nav.Link>SALUD MENTAL Y DDHH</Nav.Link>
-                <Nav.Link>COMUNICACIÓN Y VINCULACIÓN</Nav.Link>
-                <Nav.Link>GESTIÓN</Nav.Link>
-                <Nav.Link>
-                  <i
-                    className="bi bi-search"
-                    variant="primary"
-                    onClick={handleShow}
-                  ></i>
-                </Nav.Link>
-              </Nav>
-            </Offcanvas.Body>
-          </Navbar.Offcanvas>
-        </Container>
+          <Navbar.Links>
+            {links.map((link) => (
+              <div key={link.name}>{link.name}</div>
+            ))}
+            <i className="bi bi-search" variant="primary"></i>
+          </Navbar.Links>
+          <Navbar.Control></Navbar.Control>
+        </Navbar.Desktop>
+        <Navbar.Mobile>
+          {links.map((link) => (
+            <div key={link.name}>
+              <b>{link.name}</b>
+            </div>
+          ))}
+        </Navbar.Mobile>
       </Navbar>
-
-      <Offcanvas show={show} onHide={handleClose} className="bg-lila">
-        <Offcanvas.Header closeButton>
-          {/* <Offcanvas.Title>Facultad de Psicología</Offcanvas.Title> */}
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <div className="d-flex justify-content-center">
-            <h1 className="">Buscar</h1>
-          </div>
-        </Offcanvas.Body>
-      </Offcanvas>
     </>
   );
 }
