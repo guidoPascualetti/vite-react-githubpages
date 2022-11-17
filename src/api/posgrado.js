@@ -24,7 +24,7 @@ const data = {
       { id:"1",title: "CARRERAS DE" , titleBold:"POSGRADO", type:"acordeon", bg:"lila", color:"white"},
       { id:"2",title: "PROGRAMAS DE" , titleBold:"ACTUALIZACIÓN", type:"acordeon", bg:"lila", color:"white"},
       { id:"3",title: "CURSOS Y SEMINARIOS" , titleBold:"DE POSGRADO", type:"acordeon", bg:"lila", color:"white"},
-      { id:"4",title: "INSCRIPCIÓN A LAS" , titleBold:"ACTIVIDADES DE POSGGRADO", type:" LINK", bg:"gris-claro", color:"gris-intermedio"},
+      { id:"4",title: "INSCRIPCIÓN A LAS" , titleBold:"ACTIVIDADES", type:" LINK", bg:"gris-claro", color:"gris-intermedio"},
     ]  
 
      

@@ -3,9 +3,9 @@ import Col from "react-bootstrap/Col";
 import Title from "./UI/Title";
 export default function HeaderSecretaria({ firstT, secondT }) {
   return (
-    <Row>
-      <Col xs={12} style={{ height: "400px" }} className="bg-lila"></Col>
-      <Col xs={12} className="pt-4">
+    <Row className="bg-gris-clarito-fondo">
+      <Col xs={12} lg={6} style={{ height: "400px" }} className="bg-lila"></Col>
+      <Col xs={12} lg={6} className="pt-4 order-lg-first">
         <Title>
           <h1 className="text-lila secretarias-fino">
             {firstT}
@@ -13,8 +13,6 @@ export default function HeaderSecretaria({ firstT, secondT }) {
             <span className="secretarias">{secondT}</span>
           </h1>
         </Title>
-      </Col>
-      <Col xs={12}>
         <div className="p-4">
           <p className="psico-p-destacado">
             La Secretaría de Posgrado es el área que tiene a su cargo la gestión

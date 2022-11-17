@@ -6,14 +6,15 @@ export default function Boton({ children, bg, isActive }) {
   return (
     <Container>
       <Row
-        className={` d-flex justify-content-between align-items-center pt-4 pb-4  bg-${bg}`}
+        className={` d-flex justify-content-between align-items-center pt-4 pt-md-0 pb-4  bg-${bg}`}
       >
-        <Col xs={10} className=" d-flex align-items-center">
+        <Col xs={10} md={12} className=" d-flex align-items-center">
           <div className="d-flex">{children}</div>
         </Col>
         <Col
           xs={2}
-          className=" d-flex  justify-content-end align-items-start"
+          md={12}
+          className=" d-flex justify-content-end align-items-start order-md-first"
           style={{ height: "50px" }}
         >
           <i

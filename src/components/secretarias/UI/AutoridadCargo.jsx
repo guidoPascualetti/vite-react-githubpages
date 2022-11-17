@@ -1,17 +1,17 @@
 export default function AutoridadCargo({ autoridad, cargo }) {
   return (
-    <div className="text-black">
+    <div className="text-black pt-4" style={{ width: "100%" }}>
       <p style={{ fontWeight: "700", fontSize: "22px", lineHeight: "22px" }}>
         {autoridad}
       </p>
-      <div style={{ lineHeight: "12px" }}>
+      <div style={{}}>
         {cargo.map((item) => (
-          <p
+          <span
             className="text-violeta"
             style={{ fontWeight: "600", fontSize: "16px" }}
           >
-            {item}
-          </p>
+            {item}{" "}
+          </span>
         ))}
       </div>
     </div>

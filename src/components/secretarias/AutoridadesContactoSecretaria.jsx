@@ -11,11 +11,9 @@ export default function ({
   horario,
 }) {
   return (
-    <Row className="bg-gris-claro">
-      <Col xs={12} className="pb-4 pt-4">
+    <Row className="bg-gris-claro ">
+      <Col xs={12} lg={8} className=" pt-4">
         <SubTitle>AUTORIDADES</SubTitle>
-      </Col>
-      <Col>
         {autoridades.map((item) => (
           <AutoridadCargo
             key={item.autoridad}
@@ -24,7 +22,7 @@ export default function ({
           />
         ))}
       </Col>
-      <Col xs={12} className=" pt-4">
+      <Col xs={12} lg={4} className=" pt-4">
         <SubTitle>CONTACTO</SubTitle>
 
         <ContactoCard
