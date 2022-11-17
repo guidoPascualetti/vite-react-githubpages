@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export default function Boton({ children, bg, active = false }) {
+export default function Boton({ children, bg, isActive }) {
   return (
     <Container>
       <Row
@@ -20,9 +20,9 @@ export default function Boton({ children, bg, active = false }) {
             className={` bi bi-arrow-up-right`}
             style={{
               fontSize: "25px",
-              color: "#D9D9D9",
+              color: "#FFFFFF",
               transition: "all .3s ",
-              transform: active ? "rotate(90deg)" : "",
+              transform: isActive ? "rotate(90deg)" : "",
             }}
           ></i>
         </Col>

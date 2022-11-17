@@ -7,7 +7,18 @@ import HeaderSecretaria from "../components/secretarias/HeaderSecretaria";
 import AutoridadesContactoSecretaria from "../components/secretarias/AutoridadesContactoSecretaria";
 import data from "../api/posgrado";
 import Title from "../components/secretarias/UI/Title";
+import Acordeon from "../components/functional/Acordeon";
+import { useState } from "react";
 export default function Posgrado() {
+  const [acordeonActive, setAcordeonActive] = useState("");
+  const handlerClickAcorden = (k) => {
+    if (k == acordeonActive) {
+      setAcordeonActive("");
+    } else {
+      setAcordeonActive(k);
+    }
+  };
+
   return (
     // <PagesLayout nombre="Posgrado" descripcion=" desc de la sec" imagen="" />
     <>
@@ -26,73 +37,37 @@ export default function Posgrado() {
         ></AutoridadesContactoSecretaria>
 
         <Row className="mt-3">
-          <Col className="mt-2" xs={12} md={6} lg={3}>
-            <Boton bg="lila">
-              <p className="psico-destacado-fino text-white p-0 m-0">
-                CARRERAS DE <br></br>
-                <span className="psico-destacado text-white">POSGRADO</span>
-              </p>
-            </Boton>
-          </Col>
-          <Col className="mt-2" xs={12} md={6} lg={3}>
-            <Boton bg="lila">
-              <p className="psico-destacado-fino text-white p-0 m-0">
-                CARRERAS DE <br></br>
-                <span className="psico-destacado text-white">POSGRADO</span>
-              </p>
-            </Boton>
-          </Col>
-          <Col className="mt-2" xs={12} md={6} lg={3}>
-            <Boton bg="lila">
-              <p className="psico-destacado-fino text-white p-0 m-0">
-                CARRERAS DE <br></br>
-                <span className="psico-destacado text-white">POSGRADO</span>
-              </p>
-            </Boton>
-          </Col>
-          <Col className="mt-2" xs={12} md={6} lg={3}>
-            <Boton bg="lila">
-              <p className="psico-destacado-fino text-white p-0 m-0">
-                CARRERAS DE <br></br>
-                <span className="psico-destacado text-white">POSGRADO</span>
-              </p>
-            </Boton>
-          </Col>
-
-          {/* <Col xs={12}>
-            <Boton bg="lila">
-              <p className="psico-destacado text-white p-0 m-0 ">
-                PROGRAMAS DE<br></br>
-                <span className="psico-destacado-fino text-white p-0 m-0">
-                  ACTUALIZACIÓN
-                </span>
-              </p>
-            </Boton>
-          </Col>
-          <Col xs={12}>
-            <Boton bg="lila">
-              <p className="psico-destacado text-white p-0 m-0 ">
-                CURSOS Y<br></br>
-                <span className="psico-destacado-fino text-white p-0 m-0">
-                  SEMINARIOS
-                </span>
-              </p>
-            </Boton>
-          </Col>
-          <Col xs={12}>
-            <Boton bg="gris-claro">
-              <p className="psico-destacado text-gris-intermedio p-0 m-0 ">
-                INSCRIPCIÓN{" "}
-                <span className="psico-destacado-fino text-gris-intermedio p-0 m-0">
-                  A LAS ACTIVIDADES DE POSGRADO
-                </span>
-              </p>
-            </Boton>
-          </Col> */}
+          {data.acordeon.map((item, index) => (
+            <Col className="mt-2" xs={12} md={6} lg={3} key={index}>
+              <Acordeon
+                isActive={acordeonActive === item.id}
+                clickHandler={() => handlerClickAcorden(item.id)}
+              >
+                <Acordeon.Button>
+                  <Boton bg={item.bg} isActive={acordeonActive === item.id}>
+                    <p
+                      className={`psico-destacado-fino text-${item.color} p-0 m-0`}
+                    >
+                      {item.title} <br></br>
+                      <span className={`psico-destacado text${item.color}`}>
+                        {item.titleBold}
+                      </span>
+                    </p>
+                  </Boton>
+                </Acordeon.Button>
+                <Acordeon.Content>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Fugiat eos sapiente eius quo id accusantium non fugit unde
+                  atque accusamus excepturi quod ad, eaque quos molestiae est,
+                  labore impedit voluptatem.
+                </Acordeon.Content>
+              </Acordeon>
+            </Col>
+          ))}
         </Row>
 
         <Row>
-          <Col xs={12} className="pt-4">
+          <Col xs={12} className="pt-4 ">
             <Title>
               <h3 className="text-gris-intermedio psico-destacado-fino">
                 NOTICIAS &nbsp;

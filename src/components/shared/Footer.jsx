@@ -35,7 +35,7 @@ export default function Footer() {
   };
   return (
     <>
-      <Container fluid className="bg-gris-oscuro text-white pt-5 pb-5">
+      <Container fluid className="bg-gris-oscuro text-white mt-5 pt-5 pb-5">
         <Container>
           <Row>
             {Object.keys(links).map((k) => (
