@@ -7,6 +7,8 @@ import logo from "../../assets/logos/logo-blanco.png";
 
 import Acordeon from "../functional/Acordeon";
 import AcordeonButton from "../UI/footer/AcordeonButton";
+import Botonera from "./Botonera";
+
 export default function Footer() {
   const [acordeonActive, setAcordeonActive] = useState("");
   const links = {
@@ -35,6 +37,7 @@ export default function Footer() {
   };
   return (
     <>
+      <Botonera />
       <Container fluid className="bg-gris-oscuro text-white mt-5 pt-5 pb-5">
         <Container>
           <Row>

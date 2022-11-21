@@ -15,7 +15,7 @@ export default function Botonera() {
   ];
 
   return (
-    <Container fluid className="botonera">
+    <Container fluid className="botonera mt-3">
       <Container className>
         <Row className=" pb-5 pt-5">
           <Col xs={12} lg={3}>
@@ -46,6 +46,10 @@ export default function Botonera() {
             </Col>
           ))}
         </Row>
+        <div
+          style={{ width: "100%", height: "20px" }}
+          className="bg-lila"
+        ></div>
       </Container>
     </Container>
   );

@@ -22,29 +22,29 @@ export default function Posgrado() {
   return (
     // <PagesLayout nombre="Posgrado" descripcion=" desc de la sec" imagen="" />
     <>
-      <Container>
-        <HeaderSecretaria
-          firstT={data.tituloFino}
-          secondT={data.titleAncho}
-        ></HeaderSecretaria>
+      <HeaderSecretaria
+        firstT={data.tituloFino}
+        secondT={data.titleAncho}
+      ></HeaderSecretaria>
 
-        <AutoridadesContactoSecretaria
-          autoridades={data.autoridades}
-          email={data.email}
-          direccion={data.direccion}
-          lugar={data.lugar}
-          horario={data.horario}
-        ></AutoridadesContactoSecretaria>
+      <AutoridadesContactoSecretaria
+        autoridades={data.autoridades}
+        email={data.email}
+        direccion={data.direccion}
+        lugar={data.lugar}
+        horario={data.horario}
+      ></AutoridadesContactoSecretaria>
 
+      <Container fluid className="d-lg-none">
         <Row className="mt-3">
           {data.acordeon.map((item, index) => (
-            <Col className="mt-2" xs={12} md={6} lg={3} key={index}>
+            <Col className="mt-2" xs={12} key={index}>
               <Acordeon
                 isActive={acordeonActive === item.id}
                 clickHandler={() => handlerClickAcorden(item.id)}
               >
                 <Acordeon.Button>
-                  <Boton bg={item.bg} isActive={acordeonActive === item.id}>
+                  <Boton isActive={acordeonActive === item.id} bg={item.bg}>
                     <p
                       className={`psico-destacado-fino text-${item.color} p-0 m-0`}
                     >
@@ -65,20 +65,52 @@ export default function Posgrado() {
             </Col>
           ))}
         </Row>
+      </Container>
+      <Container fluid className="d-none d-lg-block">
+        <Row className="mt-3">
+          {data.acordeon.map((item, index) => (
+            <Col className="mt-2" xs={12} md={6} lg={3} key={index}>
+              <Boton
+                isActive={acordeonActive === item.id}
+                bg={item.bg}
+                click={() => handlerClickAcorden(item.id)}
+                changeBg={true}
+              >
+                <p
+                  className={`psico-destacado-fino text-${item.color} p-0 m-0`}
+                >
+                  {item.title} <br></br>
+                  <span className={`psico-destacado text${item.color}`}>
+                    {item.titleBold}
+                  </span>
+                </p>
+              </Boton>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+      <Container className="d-none d-lg-block">
+        <Row className="pt-3 ">
+          <h1>Contenido de {acordeonActive} </h1>
+        </Row>
+      </Container>
 
-        <Row>
-          <Col xs={12} className="pt-4 ">
-            <Title>
-              <h3 className="text-gris-intermedio psico-destacado-fino">
-                NOTICIAS &nbsp;
-                <span className="psico-destacado">POSGRADO</span>
-              </h3>
-            </Title>
-          </Col>
-        </Row>
-        <Row>
-          <Cards />
-        </Row>
+      <Container fluid>
+        <Container>
+          <Row>
+            <Col xs={12} className="pt-4 ">
+              <Title>
+                <h3 className="text-gris-intermedio psico-destacado-fino">
+                  NOTICIAS &nbsp;
+                  <span className="psico-destacado">POSGRADO</span>
+                </h3>
+              </Title>
+            </Col>
+          </Row>
+          <Row>
+            <Cards />
+          </Row>
+        </Container>
       </Container>
     </>
   );
