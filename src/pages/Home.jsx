@@ -1,6 +1,6 @@
 import Cards from "../components/group/Cards";
 import CardHeader from "../components/UI/CardHeader";
-import Botonera from "../components/home/Botonera";
+
 export default function Home() {
   return (
     <>
@@ -12,7 +12,7 @@ export default function Home() {
 
       <Cards />
       <br />
-      <Botonera />
+
       <br />
     </>
   );
