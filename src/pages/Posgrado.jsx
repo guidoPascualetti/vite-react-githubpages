@@ -90,7 +90,7 @@ export default function Posgrado() {
         </Row>
       </Container>
       <Container className="d-none d-lg-block">
-        <Row className="pt-3 bg-danger">
+        <Row className="pt-3 ">
           <h1>Contenido de {acordeonActive} </h1>
         </Row>
       </Container>

@@ -10,12 +10,12 @@ function App() {
     <>
       <Menu />
       <Routes>
-        <Route path="/vite-react-githubpages" element={<Home />} />
-        <Route
+        <Route path="/" element={<Home />} />
+        {/* <Route
           path="/vite-react-githubpages/comunicacion"
           element={<ComunicacionYVinculacion />}
-        />
-        <Route path="/vite-react-githubpages/posgrado" element={<Posgrado />} />
+        /> */}
+        <Route path="/posgrado" element={<Posgrado />} />
       </Routes>
       <Footer />
     </>

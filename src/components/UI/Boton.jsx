@@ -16,6 +16,7 @@ export default function Boton({
         ${isActive && changeBg ? "bg-active" : "bg-${bg}"}
         d-flex justify-content-between align-items-center pt-4 pt-md-0 pb-4 bg-${bg} `}
         onClick={click}
+        role="button"
       >
         <Col xs={10} md={12} className=" d-flex align-items-center">
           <div className="d-flex">{children}</div>
