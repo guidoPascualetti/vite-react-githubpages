@@ -7,18 +7,18 @@ export default function HeaderSecretaria({ firstT, secondT, bajada = null }) {
   return (
     <Container fluid className="bg-gris-clarito-fondo">
       <Container>
-        <Row className="bg-gris-clarito-fondo" style={{ minHeight: "600px" }}>
-          <Col
-            xs={12}
-            lg={6}
-            className="bg-lila d-flex mt-4"
-            style={{
-              backgroundImage: `url("https://i.picsum.photos/id/140/400/400.jpg?hmac=g-jpVEE9sIBkD90UyFVabP86FsrmMieI68Tc-9_GKYE")`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              minHeight: "500px",
-            }}
-          ></Col>
+        <Row className="bg-gris-clarito-fondo pb-4">
+          <Col xs={12} lg={6} className="bg-lila d-flex mt-4">
+            <div
+              style={{
+                backgroundImage: `url("https://i.picsum.photos/id/140/400/400.jpg?hmac=g-jpVEE9sIBkD90UyFVabP86FsrmMieI68Tc-9_GKYE")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: "400px",
+                width: "100%",
+              }}
+            ></div>
+          </Col>
           <Col xs={12} lg={6} className=" order-lg-first">
             <Title>
               <h1 className="text-lila secretarias-fino">

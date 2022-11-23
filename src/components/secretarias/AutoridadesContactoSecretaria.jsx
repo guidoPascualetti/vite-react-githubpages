@@ -25,15 +25,17 @@ export default function ({
               />
             ))}
           </Col>
-          <Col xs={12} lg={4} className=" pt-4">
-            <SubTitle>CONTACTO</SubTitle>
+          <Col xs={12} lg={4} className=" pt-4 ">
+            <div className="border-start border-4 border-white ps-3 pt-3">
+              <SubTitle>CONTACTO</SubTitle>
 
-            <ContactoCard
-              email={email}
-              direccion={direccion}
-              lugar={lugar}
-              horario={horario}
-            />
+              <ContactoCard
+                email={email}
+                direccion={direccion}
+                lugar={lugar}
+                horario={horario}
+              />
+            </div>
           </Col>
         </Row>
       </Container>

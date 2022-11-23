@@ -16,7 +16,7 @@ const acordionContainer = {
 };
 
 const acordionContainerA = {
-  maxHeight: "1000px",
+  maxHeight: "1400px",
   transition: "max-height .3s ease-in",
   overflow: "hidden",
 };

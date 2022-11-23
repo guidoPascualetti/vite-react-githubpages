@@ -14,7 +14,7 @@ export default function Botonera({ data }) {
       setAcordeonActive(k);
     }
   };
-  const lalo = `<h1>Fa!!!!!!!!!!!!!!</h1>`;
+
   return (
     <>
       <Container fluid className="d-lg-none">
