@@ -7,7 +7,7 @@ export default function HeaderSecretaria({ firstT, secondT, bajada = null }) {
   return (
     <Container fluid className="bg-gris-clarito-fondo">
       <Container>
-        <Row className="bg-gris-clarito-fondo">
+        <Row className="bg-gris-clarito-fondo" style={{ minHeight: "400px" }}>
           <Col
             xs={12}
             lg={6}

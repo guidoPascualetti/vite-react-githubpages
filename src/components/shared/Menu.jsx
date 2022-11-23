@@ -7,13 +7,13 @@ import logo from "../../assets/logos/logo.svg";
 import { Link } from "react-router-dom";
 import Navbar from "../functional/Navbar";
 const links = [
-  { name: "INSTITUCIONAL", to:"#" },
-  { name: "ACADÉMICA", to:"#" },
-  { name: "INVESTIGACIÓN", to:"#" },
-  { name: "POSGRADO", to:"/posgrado" },
-  { name: "SALUD MENTAL Y DDHH", to:"#" },
-  { name: "COMUNICACIÓN Y VINCULACIÓN", to:"/comunicacion" },
-  { name: "GESTIÓN", to:"#" },
+  { name: "INSTITUCIONAL", to: "#" },
+  { name: "ACADÉMICA", to: "/academica" },
+  { name: "INVESTIGACIÓN", to: "#" },
+  { name: "POSGRADO", to: "/posgrado" },
+  { name: "SALUD MENTAL Y DDHH", to: "/ddhh" },
+  { name: "COMUNICACIÓN Y VINCULACIÓN", to: "/comunicacion" },
+  { name: "GESTIÓN", to: "#" },
 ];
 
 function menu() {
@@ -27,10 +27,12 @@ function menu() {
             </div>
           </Navbar.Brand>
           <Navbar.Links>
-           {links.map((link) => (
-           <Link to={link.to}>
-              <div key={link.name} role="button">{link.name}</div>
-           </Link>
+            {links.map((link) => (
+              <Link to={link.to}>
+                <div key={link.name} role="button">
+                  {link.name}
+                </div>
+              </Link>
             ))}
             <i className="bi bi-search" variant="primary"></i>
           </Navbar.Links>
