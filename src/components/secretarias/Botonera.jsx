@@ -5,8 +5,7 @@ import Boton from "../UI/Boton";
 import Acordeon from "../functional/Acordeon";
 
 import { useState } from "react";
-export default function Botonera({data}) {
-
+export default function Botonera({ data }) {
   const [acordeonActive, setAcordeonActive] = useState("");
   const handlerClickAcorden = (k) => {
     if (k == acordeonActive) {
@@ -15,9 +14,10 @@ export default function Botonera({data}) {
       setAcordeonActive(k);
     }
   };
-return (
+  const lalo = `<h1>Fa!!!!!!!!!!!!!!</h1>`;
+  return (
     <>
-          <Container fluid className="d-lg-none">
+      <Container fluid className="d-lg-none">
         <Row className="mt-3">
           {data.acordeon.map((item, index) => (
             <Col className="mt-2" xs={12} key={index}>
@@ -38,10 +38,12 @@ return (
                   </Boton>
                 </Acordeon.Button>
                 <Acordeon.Content>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Fugiat eos sapiente eius quo id accusantium non fugit unde
-                  atque accusamus excepturi quod ad, eaque quos molestiae est,
-                  labore impedit voluptatem.
+                  <Container>
+                    <div
+                      className="mt-3"
+                      dangerouslySetInnerHTML={{ __html: item.content }}
+                    ></div>
+                  </Container>
                 </Acordeon.Content>
               </Acordeon>
             </Col>
@@ -73,9 +75,19 @@ return (
       </Container>
       <Container className="d-none d-lg-block">
         <Row className="pt-3 ">
-          <h1>Contenido de {acordeonActive} </h1>
+          <h1>
+            {" "}
+            {data.acordeon
+              .filter((item) => item.id == acordeonActive)
+              .map((item) => (
+                <div
+                  className="mt-3 p-5"
+                  dangerouslySetInnerHTML={{ __html: item.content }}
+                ></div>
+              ))}
+          </h1>
         </Row>
       </Container>
-      </>
-)
+    </>
+  );
 }
