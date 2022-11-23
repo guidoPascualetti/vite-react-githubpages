@@ -16,6 +16,7 @@ export default function HeaderSecretaria({ firstT, secondT, bajada = null }) {
               backgroundImage: `url("https://i.picsum.photos/id/140/400/400.jpg?hmac=g-jpVEE9sIBkD90UyFVabP86FsrmMieI68Tc-9_GKYE")`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              minHeight: "400px",
             }}
           ></Col>
           <Col xs={12} lg={6} className="pt-4 order-lg-first">

@@ -28,10 +28,10 @@ export default function Botonera({ data }) {
                 <Acordeon.Button>
                   <Boton isActive={acordeonActive === item.id} bg={item.bg}>
                     <p
-                      className={`psico-destacado-fino text-${item.color} p-0 m-0`}
+                      className={`psico-boton-fino text-${item.color} p-0 m-0`}
                     >
                       {item.title} <br></br>
-                      <span className={`psico-destacado text${item.color}`}>
+                      <span className={`psico-boton text${item.color}`}>
                         {item.titleBold}
                       </span>
                     </p>
@@ -53,18 +53,16 @@ export default function Botonera({ data }) {
       <Container fluid className="d-none d-lg-block">
         <Row className="mt-3">
           {data.acordeon.map((item, index) => (
-            <Col className="mt-2" xs={12} md={6} lg={3} key={index}>
+            <Col className="mt-2" lg={2} key={index}>
               <Boton
                 isActive={acordeonActive === item.id}
                 bg={item.bg}
                 click={() => handlerClickAcorden(item.id)}
                 changeBg={true}
               >
-                <p
-                  className={`psico-destacado-fino text-${item.color} p-0 m-0`}
-                >
+                <p className={`psico-boton-fino text-${item.color} p-0 m-0`}>
                   {item.title} <br></br>
-                  <span className={`psico-destacado text${item.color}`}>
+                  <span className={`psico-boton text${item.color}`}>
                     {item.titleBold}
                   </span>
                 </p>
