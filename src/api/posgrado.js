@@ -21,7 +21,10 @@ const data = {
     lugar:" Tercer Piso.", 
     horario:"Horario de atención: Lunes a viernes de 8 a 14 hs.",
     acordeon: [
-      { id:"1",title: "CARRERAS DE" , titleBold:"POSGRADO", type:"acordeon", bg:"lila", color:"white", content:`
+       { id:"1",title: "Autoridades" , titleBold:"POSGRADO", type:"acordeon", bg:"lila", color:"white", content:`
+      
+    `},
+      { id:"2",title: "CARRERAS DE" , titleBold:"POSGRADO", type:"acordeon", bg:"lila", color:"white", content:`
       <p class="psico-p-destacado">
       La Secretaría de Posgrado tiene a su cargo la gestión de las carreras de grados académicos, especializaciones y doctorado y los seminarios y cursos de posgrado de actualización, profundización y perfeccionamiento que ofrece la Facultad.
       Los seminarios y cursos de posgrado de las diferentes carreras de grados académicos pueden estar dirigidos exclusivamente a los alumnos inscriptos en dichas carreras o incluir a los interesados en una temática particular.
@@ -35,13 +38,13 @@ const data = {
       > Especialización en Evaluación y Diagnóstico Psicológico</p>
       
       `},
-      { id:"2",title: "PROGRAMAS DE" , titleBold:"ACTUALIZACIÓN", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"3",title: "PROGRAMAS DE" , titleBold:"ACTUALIZACIÓN", type:"acordeon", bg:"lila", color:"white", content:`
       
     `},
-      { id:"3",title: "CURSOS Y SEMINARIOS" , titleBold:"DE POSGRADO", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"4",title: "CURSOS Y SEMINARIOS" , titleBold:"DE POSGRADO", type:"acordeon", bg:"lila", color:"white", content:`
       
     `},
-      { id:"4",title: "INSCRIPCIÓN A" , titleBold:"ACTIVIDADES", type:" LINK", bg:"gris-clarito-fondo", color:"gris-intermedio", content:`
+      { id:"5",title: "INSCRIPCIÓN A" , titleBold:"ACTIVIDADES", type:" LINK", bg:"lila", color:"white", content:`
       
     `},
     ]  

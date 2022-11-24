@@ -23,13 +23,6 @@ export default function Posgrado() {
         secondT={data.titleAncho}
       ></HeaderSecretaria>
 
-      <AutoridadesContactoSecretaria
-        autoridades={data.autoridades}
-        email={data.email}
-        direccion={data.direccion}
-        lugar={data.lugar}
-        horario={data.horario}
-      ></AutoridadesContactoSecretaria>
 
     <Botonera data={data}>
 

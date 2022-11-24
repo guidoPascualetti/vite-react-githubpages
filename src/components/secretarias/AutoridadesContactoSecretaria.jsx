@@ -12,8 +12,7 @@ export default function ({
   horario,
 }) {
   return (
-    <Container fluid className="bg-gris-claro">
-      <Container>
+
         <Row className="bg-gris-claro pb-5">
           <Col xs={12} lg={8} className=" pt-4">
             <SubTitle>AUTORIDADES</SubTitle>
@@ -38,7 +37,6 @@ export default function ({
             </div>
           </Col>
         </Row>
-      </Container>
-    </Container>
+
   );
 }

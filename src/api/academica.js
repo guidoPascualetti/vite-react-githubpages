@@ -41,7 +41,8 @@ const data = {
     lugar:" Fata", 
     horario:"Falta",
     acordeon: [
-      { id:"1",title: "Programa de " , titleBold:"permanencia", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"1",title: "Autoridades " , titleBold:"Académica", type:"acordeon", bg:"lila", color:"white"},
+      { id:"2",title: "Programa de " , titleBold:"permanencia", type:"acordeon", bg:"lila", color:"white", content:`
       <p class="psico-p-destacado">
       La Dirección de Permanencia, Avance y Acompañamiento para el Egreso se ocupa de trabajar sobre las trayectorias académicas de estudiantes de entre 3er y 6to año que cursan las carreras de Licenciatura y Profesorado en Psicología. 
       Entre sus objetivos se cuenta la realización de relevamientos para impulsar estrategias de conjunto que favorezcan la permanencia, potencien el avance y faciliten el egreso. Estas tareas comprenden la gestión de talleres de lecto-escritura y de planificación y organización de carrera. 
@@ -50,7 +51,7 @@ const data = {
       </p>
       
       `},
-      { id:"2",title: "Dirección de" , titleBold:"ingreso", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"3",title: "Dirección de" , titleBold:"ingreso", type:"acordeon", bg:"lila", color:"white", content:`
       <p class="psico-p-destacado">
       Esta Dirección tiene la responsabilidad de impulsar políticas académicas tendientes a promover mejores condiciones para el ingreso y permanencia del estudiantado que transita el primer y segundo año de las distintas carreras de la Facultad. Algunas de las iniciativas a su cargo son:
         </p>
@@ -82,7 +83,7 @@ const data = {
 
       
     `},
-      { id:"3",title: " Dirección " , titleBold:"de egreso", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"4",title: " Dirección " , titleBold:"de egreso", type:"acordeon", bg:"lila", color:"white", content:`
 
 
       <p class="psico-p-destacado">
@@ -134,7 +135,7 @@ const data = {
 
       
     `},
-      { id:"4",title: " Sistema de Adscripción " , titleBold:"a la docencia universitaria", type:" LINK", bg:"gris-clarito-fondo", color:"gris-intermedio", content:`
+      { id:"5",title: " Sistema de Adscripción " , titleBold:"a la docencia universitaria", type:" LINK", bg:"lila", color:"white", content:`
       <p class="psico-p-destacado">
       El Sistema de adscripción a la docencia universitaria consiste en el desarrollo de actividades docentes, de investigación o de extensión para la mejora de la formación académica y/o científica. Están destinadas a estudiantes de carreras de grado y a graduadas y graduados de la Facultad de Psicología.   
 

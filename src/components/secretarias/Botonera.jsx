@@ -3,10 +3,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Boton from "../UI/Boton";
 import Acordeon from "../functional/Acordeon";
-
+import AutoridadesContactoSecretaria from "./AutoridadesContactoSecretaria";
 import { useState } from "react";
 export default function Botonera({ data }) {
-  const [acordeonActive, setAcordeonActive] = useState("");
+  const [acordeonActive, setAcordeonActive] = useState("1");
   const handlerClickAcorden = (k) => {
     if (k == acordeonActive) {
       setAcordeonActive("");
@@ -39,10 +39,22 @@ export default function Botonera({ data }) {
                 </Acordeon.Button>
                 <Acordeon.Content>
                   <Container>
-                    <div
-                      className="mt-3"
-                      dangerouslySetInnerHTML={{ __html: item.content }}
-                    ></div>
+                    {
+                      item.id == 1
+                        ?<AutoridadesContactoSecretaria
+                        autoridades={data.autoridades}
+                        email={data.email}
+                        direccion={data.direccion}
+                        lugar={data.lugar}
+                        horario={data.horario}
+                      ></AutoridadesContactoSecretaria>
+                        :                    <div
+                        className="mt-3"
+                        dangerouslySetInnerHTML={{ __html: item.content }}
+                      ></div>
+
+                    }
+
                   </Container>
                 </Acordeon.Content>
               </Acordeon>
@@ -51,7 +63,7 @@ export default function Botonera({ data }) {
         </Row>
       </Container>
       <Container fluid className="d-none d-lg-block">
-        <Row className="mt-3">
+        <Row className="mt-3 justify-content-center">
           {data.acordeon.map((item, index) => (
             <Col className="mt-2" lg={2} key={index}>
               <Boton
@@ -73,17 +85,31 @@ export default function Botonera({ data }) {
       </Container>
       <Container className="d-none d-lg-block">
         <Row className="pt-3 ">
-          <h1>
-            {" "}
-            {data.acordeon
-              .filter((item) => item.id == acordeonActive)
-              .map((item) => (
+
+          {
+            acordeonActive == 1
+              ?   <AutoridadesContactoSecretaria
+              autoridades={data.autoridades}
+              email={data.email}
+              direccion={data.direccion}
+              lugar={data.lugar}
+              horario={data.horario}
+            ></AutoridadesContactoSecretaria>
+              : data.acordeon
+                .filter((item) => item.id == acordeonActive)
+                .map((item) => (
+                 
                 <div
                   className="mt-3 p-5"
                   dangerouslySetInnerHTML={{ __html: item.content }}
                 ></div>
-              ))}
-          </h1>
+          
+              ))
+          }
+        
+            
+
+       
         </Row>
       </Container>
     </>

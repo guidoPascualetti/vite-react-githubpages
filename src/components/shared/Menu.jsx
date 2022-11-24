@@ -22,16 +22,21 @@ function menu() {
       <Navbar>
         <Navbar.Desktop>
           <Navbar.Brand>
+            <Link to="/" className="text-decoration-none text-black">
             <div className="">
+                
+               
               <img style={{ width: "100%" }} src={logo} />
+            
             </div>
+            </Link>
           </Navbar.Brand>
           <Navbar.Links>
             {links.map((link) => (
-              <Link to={link.to}>
-                <div key={link.name} role="button">
+              <Link to={link.to} className="text-decoration-none text-black">
+                
                   {link.name}
-                </div>
+              
               </Link>
             ))}
             <i className="bi bi-search" variant="primary"></i>
@@ -39,11 +44,16 @@ function menu() {
           <Navbar.Control></Navbar.Control>
         </Navbar.Desktop>
         <Navbar.Mobile>
-          {links.map((link) => (
-            <div key={link.name}>
-              <b>{link.name}</b>
-            </div>
-          ))}
+        {links.map((link) => (
+            <Navbar.MobileLink>
+
+              <Link to={link.to} className="text-decoration-none text-black">
+                
+                  {link.name}
+              
+              </Link>
+            </Navbar.MobileLink>
+            ))}
         </Navbar.Mobile>
       </Navbar>
     </>

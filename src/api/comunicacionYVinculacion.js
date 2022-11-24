@@ -26,7 +26,8 @@ const data = {
     lugar:" Tercer Piso.", 
     horario:"Horario de atención: Lunes a viernes de 8 a 14 hs.",
     acordeon: [
-      { id:"1",title: "ÁREA DE EDUCACIÓN " , titleBold:"A DISTANCIA", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"1",title: "Autoridades " , titleBold:"Comunicación", type:"acordeon", bg:"lila", color:"white"}, 
+      { id:"2",title: "ÁREA DE EDUCACIÓN " , titleBold:"A DISTANCIA", type:"acordeon", bg:"lila", color:"white", content:`
       <p class="psico-p-destacado">
       El Área de Educación a Distancia (EaD) elabora y acompaña las propuestas pedagógicas a distancia de grado y posgrado de la Facultad de Psicología. 
 Trabaja en la planificación y el desarrollo pedagógico, técnico y de programación, mejorando las condiciones para concretar las actividades de enseñanza y de aprendizaje a distancia.
@@ -40,7 +41,7 @@ Trabaja en la planificación y el desarrollo pedagógico, técnico y de programa
       </p>
     
 `}, 
-      { id:"2",title: "CENTRO DE ORIENTACIÓN" , titleBold:"VOCACIONAL OCUPACIONAL (COVO)", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"3",title: "CENTRO DE ORIENTACIÓN" , titleBold:"VOCACIONAL OCUPACIONAL (COVO)", type:"acordeon", bg:"lila", color:"white", content:`
       <p class="psico-p-destacado"> 
       El Centro de Orientación Vocacional Ocupacional (COVO) constituye un lugar de trabajo en el que se articulan producciones de las áreas de Extensión (servicios a la comunidad) Docencia (Cátedras de Orientación Vocacional y Psicología Preventiva) e Investigación (Secretaría de Ciencia y Técnica) en la temática de la Orientación y su relación con el mundo de la Educación, el Trabajo, la Salud y las Políticas Sociales.
 Además, ofrece un importante servicio de Información a cargo de profesionales psicólogos. Funciona en su sede atendiendo demandas de información sobre oferta educativa y de capacitación abierta a la comunidad.

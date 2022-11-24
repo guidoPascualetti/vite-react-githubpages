@@ -39,7 +39,11 @@ const data = {
     lugar:" Tercer Piso.", 
     horario:"FALTA!!!!!!!!",
     acordeon: [
-      { id:"1",title: "Dirección de actuaciones" , 
+
+      { id:"1",title: "Autoridades " , titleBold:"Derechos Humanos", type:"acordeon", bg:"lila", color:"white", content:`
+      
+      Falta Contenido `},
+      { id:"2",title: "Dirección de actuaciones" , 
         titleBold:"en redes de salud mental y Derechos Humanos", 
         type:"acordeon", 
         bg:"lila", 
@@ -58,10 +62,10 @@ Contacto: comisión.discapacidad@presi.unlp.edu.ar
       </p>
       
       `},
-      { id:"2",title: "Dirección de " , titleBold:"mediana edad y vejez", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"3",title: "Dirección de " , titleBold:"mediana edad y vejez", type:"acordeon", bg:"lila", color:"white", content:`
       
       Falta Contenido `},
-      { id:"3",title: "Dirección de políticas " , titleBold:"de Genero y Disidencias Sexo-genéricas", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"4",title: "Dirección de políticas " , titleBold:"de Genero y Disidencias Sexo-genéricas", type:"acordeon", bg:"lila", color:"white", content:`
       Falta Contenido
     `},
      

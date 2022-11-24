@@ -81,6 +81,14 @@ function Mobile({ children }) {
     </>
   );
 }
+function MobileLink({children}){
+  const context = useContext(NavbarContext);
+  return (
+    <span className=""  onClick={() => context.setMenuToggle((prev) => !prev)}>
+      { children }
+    </span>
+  )
+}
 function Navbar({ children }) {
   const [menuToggle, setMenuToggle] = useState(false);
   const [selected, setSelected] = useState("");
@@ -110,6 +118,7 @@ function Navbar({ children }) {
 }
 Navbar.Desktop = Desktop;
 Navbar.Mobile = Mobile;
+Navbar.MobileLink = MobileLink;
 Navbar.Brand = Brand;
 Navbar.Links = Links;
 Navbar.Control = Control;
