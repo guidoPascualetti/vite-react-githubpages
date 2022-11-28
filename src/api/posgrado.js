@@ -1,6 +1,20 @@
 const data = {
     tituloFino: "SECRETARÍA de",
     titleAncho: "POSGRADO",
+    bajada:` <p className="psico-p-destacado" style={{lineHeight:"25px",textAlign: "justify"}}>
+    La Secretaría de Posgrado es el área que tiene a su cargo la
+    gestión de las carreras de grados académicos de postgrado y
+    de las actividades formativas de actualización,
+    profundización y perfeccionamiento que ofrece la Facultad.
+  </p>
+  <p className="psico-p-destacado" style={{lineHeight:"25px",textAlign: "justify"}}>
+    Las propuestas que se imparten en la actualidad son las
+    carreras de Doctorado en Psicología, la Especialización en
+    Clínica Psicoanalítica con Adultos y la Especialización en
+    Evaluación y Diagnóstico Psicológico. A esto se suman los
+    programas de actualización profesional y los cursos y
+    seminarios no conducentes a título.
+  </p>`,
     autoridades : [
         {
           autoridad: "Dra. Verónica Zabaleta",
@@ -41,7 +55,7 @@ const data = {
       { id:"3",title: "PROGRAMAS DE" , titleBold:"ACTUALIZACIÓN", type:"acordeon", bg:"lila", color:"white", content:`
       
     `},
-      { id:"4",title: "CURSOS Y SEMINARIOS" , titleBold:"DE POSGRADO", type:"acordeon", bg:"lila", color:"white", content:`
+      { id:"4",title: "CURSOS Y " , titleBold:"SEMINARIOS", type:"acordeon", bg:"lila", color:"white", content:`
       
     `},
       { id:"5",title: "INSCRIPCIÓN A" , titleBold:"ACTIVIDADES", type:" LINK", bg:"lila", color:"white", content:`

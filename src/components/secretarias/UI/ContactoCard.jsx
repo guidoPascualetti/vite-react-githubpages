@@ -5,7 +5,7 @@ export default function ContactoCard({ email, direccion, lugar, horario }) {
       style={{ fontWeight: "700", lineHeight: "12px", paddingBottom: "3em" }}
     >
       <p className="text-lila pb-3">
-        <i class="bi bi-envelope"></i> &nbsp;
+        <i className="bi bi-envelope"></i> &nbsp;
         {email}
       </p>
       <p className="" style={{ fontWeight: "400" }}>
@@ -14,12 +14,17 @@ export default function ContactoCard({ email, direccion, lugar, horario }) {
       <p className="" style={{ fontWeight: "400" }}>
         {lugar}
       </p>
-      <p className="" style={{ fontWeight: "700" }}>
-        HORARIO DE ATENCIÓN:
-      </p>
-      <p className="" style={{ fontWeight: "400" }}>
-        {horario}
-      </p>
+     {
+      horario 
+      ? (     <> <p className="" style={{ fontWeight: "700" }}>
+      HORARIO DE ATENCIÓN:
+    </p>
+    <p className="" style={{ fontWeight: "400" }}>
+      {horario}
+    </p> </>
+    )
+      :""
+     }
     </div>
   );
 }

@@ -3,7 +3,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
 import Title from "./UI/Title";
-export default function HeaderSecretaria({ firstT, secondT, bajada = null }) {
+export default function HeaderSecretaria({ firstT, secondT, children }) {
   return (
     <Container fluid className="bg-gris-clarito-fondo">
       <Container>
@@ -28,26 +28,7 @@ export default function HeaderSecretaria({ firstT, secondT, bajada = null }) {
               </h1>
             </Title>
             <div className="p-4">
-              {bajada ? (
-                bajada
-              ) : (
-                <>
-                  <p className="psico-p-destacado" style={{lineHeight:"25px",textAlign: "justify"}}>
-                    La Secretaría de Posgrado es el área que tiene a su cargo la
-                    gestión de las carreras de grados académicos de postgrado y
-                    de las actividades formativas de actualización,
-                    profundización y perfeccionamiento que ofrece la Facultad.
-                  </p>
-                  <p className="psico-p-destacado" style={{lineHeight:"25px",textAlign: "justify"}}>
-                    Las propuestas que se imparten en la actualidad son las
-                    carreras de Doctorado en Psicología, la Especialización en
-                    Clínica Psicoanalítica con Adultos y la Especialización en
-                    Evaluación y Diagnóstico Psicológico. A esto se suman los
-                    programas de actualización profesional y los cursos y
-                    seminarios no conducentes a título.
-                  </p>
-                </>
-              )}
+              {children}
             </div>
           </Col>
         </Row>

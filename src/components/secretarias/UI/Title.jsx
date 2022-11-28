@@ -1,6 +1,6 @@
 export default function Title({ children }) {
   return (
-    <div className="p-4">
+    <div className="">
       {children}
       <div
         className="bg-lila mt-2"

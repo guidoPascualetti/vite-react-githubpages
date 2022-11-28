@@ -21,7 +21,13 @@ export default function Posgrado() {
       <HeaderSecretaria
         firstT={data.tituloFino}
         secondT={data.titleAncho}
-      ></HeaderSecretaria>
+       
+      >
+      <div
+        dangerouslySetInnerHTML={{ __html: data.bajada }}
+                      ></div>
+
+      </HeaderSecretaria>
 
 
 

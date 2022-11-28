@@ -4,6 +4,8 @@ import Menu from "./components/shared/Menu";
 import Footer from "./components/shared/Footer";
 import Posgrado from "./pages/Posgrado";
 import Ddhh from "./pages/Ddhh";
+import Curso from "./pages/posgrado/Curso";
+
 import Academica from "./pages/Academica";
 import ComunicacionYVinculacion from "./pages/ComunicacionYVinculacion";
 // import Menu from "./components/functional/Navbar";
@@ -15,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/comunicacion" element={<ComunicacionYVinculacion />} />
         <Route path="/posgrado" element={<Posgrado />} />
+        <Route path="/posgrado/curso" element={<Curso />} />
         <Route path="/ddhh" element={<Ddhh />} />
         <Route path="/academica" element={<Academica />} />
       </Routes>
